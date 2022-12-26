@@ -5,7 +5,7 @@ import lombok.Getter;
 
 @AllArgsConstructor
 @Getter
-public class ProductDto {
+public class ProductResponseDto {
     private Long productId;
     private Double unitPrice;
 }

@@ -11,7 +11,6 @@ public class BatchStockExpirationDto {
 
     private Integer batchNumber;
     private Integer productId;
-    private Integer productTypeId;
     private LocalDate dueDate;
     private Integer currentQuantity;
 }

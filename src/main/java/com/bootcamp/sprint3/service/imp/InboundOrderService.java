@@ -4,7 +4,7 @@ import com.bootcamp.sprint3.dto.all.BatchStockDto;
 import com.bootcamp.sprint3.dto.request.PurchaseOrderDto;
 import com.bootcamp.sprint3.dto.response.CartViewDto;
 import com.bootcamp.sprint3.dto.response.InboundOrderViewDto;
-import com.bootcamp.sprint3.dto.response.ProductDto;
+import com.bootcamp.sprint3.dto.response.ProductResponseDto;
 import com.bootcamp.sprint3.service.IInboundOrderService;
 
 import java.util.List;
@@ -21,12 +21,12 @@ public class InboundOrderService implements IInboundOrderService {
     }
 
     @Override
-    public List<ProductDto> findAll() {
+    public List<ProductResponseDto> findAll() {
         return null;
     }
 
     @Override
-    public List<ProductDto> findAllBySection(String category) {
+    public List<ProductResponseDto> findAllBySection(String category) {
         return null;
     }
 

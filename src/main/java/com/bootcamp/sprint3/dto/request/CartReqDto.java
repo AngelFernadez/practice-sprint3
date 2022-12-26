@@ -9,5 +9,5 @@ import java.util.List;
 @Getter
 public class CartReqDto {
     private PurchaseOrderDto purchaseOrder;
-    private List<ProductDto> products;
+    private List<ProductRequestDto> products;
 }
