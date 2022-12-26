@@ -18,8 +18,10 @@ public class PurchaseOrder {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer purchase_id;
     private LocalDate date;
-    //que hacemos con este buyer
-    private Integer buyer_id;
+
+    @ManyToOne
+    @JoinColumn(name = "buyer_id")
+    private User buyer;
     @Enumerated(EnumType.STRING)
     private StatusCode statusCode;
     //hace falta esta relacion
@@ -29,6 +31,6 @@ public class PurchaseOrder {
             joinColumns = @JoinColumn(name = "purchase_id"),
             inverseJoinColumns = @JoinColumn(name = "product_id")
     )
-    private List<Product>products;
+    private List<Product> products;
 
 }

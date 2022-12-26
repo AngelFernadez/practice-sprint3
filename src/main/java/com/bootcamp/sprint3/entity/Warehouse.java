@@ -24,5 +24,8 @@ public class Warehouse {
 
     //falta la relacion con User.
     //Cada Warehouse tiene solo un User con rol representante
+    @OneToOne(cascade = CascadeType.MERGE)
+    @JoinColumn(name = "agent_id")
+    private User agent;
 
 }
