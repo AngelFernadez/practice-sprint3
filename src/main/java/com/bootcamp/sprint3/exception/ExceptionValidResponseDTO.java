@@ -1,4 +1,4 @@
-package com.bootcamp.sprint3.dto.exception;
+package com.bootcamp.sprint3.exception;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;

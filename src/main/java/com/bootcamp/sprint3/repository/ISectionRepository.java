@@ -1,9 +1,9 @@
 package com.bootcamp.sprint3.repository;
 
-import com.bootcamp.sprint3.entity.InboundOrder;
+import com.bootcamp.sprint3.entity.Section;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface IInboundOrderRepository extends JpaRepository<InboundOrder,Integer> {
+public interface ISectionRepository extends JpaRepository<Section,Integer> {
 }
