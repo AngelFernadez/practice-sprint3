@@ -5,11 +5,15 @@ import com.bootcamp.sprint3.dto.all.InboundOrderDto;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @AllArgsConstructor
 @Getter
 public class InboundOrderReqDto {
+
+    @Valid
     private InboundOrderDto inboundOrder;
-   private List<BatchStockDto> batchStock;
+    @Valid
+    private List<BatchStockDto> batchStock;
 }
