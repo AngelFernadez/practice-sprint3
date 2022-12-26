@@ -1,11 +1,10 @@
 package com.bootcamp.sprint3.utils;
 
 import com.bootcamp.sprint3.dto.all.SectionDto;
+import com.bootcamp.sprint3.dto.request.InboundOrderReqDto;
 import com.bootcamp.sprint3.dto.request.ProductRequestDto;
 import com.bootcamp.sprint3.dto.request.PurchaseOrderDto;
-import com.bootcamp.sprint3.dto.response.BatchStockExpirationDto;
-import com.bootcamp.sprint3.dto.response.BatchStockLocationDto;
-import com.bootcamp.sprint3.dto.response.ProductResponseDto;
+import com.bootcamp.sprint3.dto.response.*;
 import com.bootcamp.sprint3.entity.*;
 import com.bootcamp.sprint3.enums.RolE;
 import com.bootcamp.sprint3.enums.StatusCode;
@@ -96,8 +95,30 @@ public class Factory {
     public static PurchaseOrderDto getPurchaseOrderDto(User buyer, List<Product>products){
         return mapper.map(getPurchaseOrder(buyer,products),PurchaseOrderDto.class);
     }
+    //-----------------Warehouse-------------
+
+    public static Warehouse getWarehouse(Double unitPrice,String username, String password){
+        return new Warehouse((int) (Math.random() * 10)
+                ,Collections.singletonList(getBatch(getProduct(unitPrice)))
+        ,getUserAdmin(username,password));
+    }
+    public static WarehousesDto getWarehousesDto(Double unitPrice,String username, String password){
+        return mapper.map(getWarehouse( unitPrice,username, password),WarehousesDto.class);
+    }
 
     //---------InboundOrder---------------------------
+
+    public static InboundOrder getInboundOrder(Double unitPrice,String username, String password, Product product){
+        return new InboundOrder((int) (Math.random() * 10),LocalDate.now()
+        ,getSection(),getWarehouse(unitPrice,username, password)
+        ,Collections.singletonList(getBatch(product)));
+    }
+    public static InboundOrderReqDto getInboundOrderReqDto(Double unitPrice,String username, String password, Product product){
+        return mapper.map(getInboundOrder( unitPrice,username,  password, product),InboundOrderReqDto.class);
+    }
+    public static InboundOrderViewDto getInboundOrderViewDto(Double unitPrice, String username, String password, Product product){
+        return mapper.map(getInboundOrder( unitPrice,username,  password, product),InboundOrderViewDto.class);
+    }
 
 
 }
