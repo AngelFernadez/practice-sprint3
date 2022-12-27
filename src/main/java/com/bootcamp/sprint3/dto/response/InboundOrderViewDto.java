@@ -1,13 +1,15 @@
 package com.bootcamp.sprint3.dto.response;
 
 import com.bootcamp.sprint3.dto.all.BatchDto;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.*;
 
 import java.util.List;
 
 @AllArgsConstructor
+@NoArgsConstructor
 @Getter
+@EqualsAndHashCode
+@ToString
 public class InboundOrderViewDto {
     private List<BatchDto> batchStock;
 }

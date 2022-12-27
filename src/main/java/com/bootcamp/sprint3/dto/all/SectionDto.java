@@ -1,14 +1,15 @@
 package com.bootcamp.sprint3.dto.all;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.validation.constraints.NotNull;
 
 @AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
+@EqualsAndHashCode
+@ToString
 public class SectionDto {
     @NotNull
     private Integer sectionCode;

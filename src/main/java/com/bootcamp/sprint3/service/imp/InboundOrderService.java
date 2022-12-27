@@ -7,6 +7,7 @@ import com.bootcamp.sprint3.dto.response.BatchStockResponseDto;
 import com.bootcamp.sprint3.dto.response.CartViewDto;
 import com.bootcamp.sprint3.dto.response.ProductResponseDto;
 import com.bootcamp.sprint3.entity.InboundOrder;
+import com.bootcamp.sprint3.exception.BadRequestException;
 import com.bootcamp.sprint3.exception.NotFoundException;
 import com.bootcamp.sprint3.repository.IInboundOrderRepository;
 import com.bootcamp.sprint3.repository.IProductRepository;
@@ -14,6 +15,7 @@ import com.bootcamp.sprint3.repository.ISectionRepository;
 import com.bootcamp.sprint3.repository.IWarehouseRepository;
 import com.bootcamp.sprint3.service.IInboundOrderService;
 import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -24,6 +26,7 @@ public class InboundOrderService implements IInboundOrderService {
     private IInboundOrderRepository inboundOrderRepository;
     private ISectionRepository sectionRepository;
     private IWarehouseRepository warehouseRepository;
+    @Autowired
     private IProductRepository productRepository;
 
 

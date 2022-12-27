@@ -1,12 +1,13 @@
 package com.bootcamp.sprint3.dto.request;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
+@EqualsAndHashCode
+@ToString
 public class OrderStatusDto {
     private String statusCode;
 }

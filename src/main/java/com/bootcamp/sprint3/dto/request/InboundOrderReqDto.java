@@ -1,10 +1,7 @@
 package com.bootcamp.sprint3.dto.request;
 
 import com.bootcamp.sprint3.dto.all.InboundOrderDto;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.validation.Valid;
 
@@ -12,6 +9,8 @@ import javax.validation.Valid;
 @NoArgsConstructor
 @Getter
 @Setter
+@EqualsAndHashCode
+@ToString
 public class InboundOrderReqDto {
 
     @Valid
